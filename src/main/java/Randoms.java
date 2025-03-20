@@ -20,11 +20,13 @@ import java.util.Random;
 
 class Randoms implements Iterable<Integer> {
     protected Random random;
-    int value;
+    int min;
+    int max;
+
 
     public Randoms(int min, int max) {
-        random = new Random();
-        value = min + random.nextInt(max - min + 1);
+        this.min = min;
+        this.max = max;
     }
 
 
@@ -42,7 +44,8 @@ class Randoms implements Iterable<Integer> {
 
         @Override
         public Integer next() {
-            return value;
+
+            return min + new Random().nextInt(max - min + 1);
         }
     }
 }
