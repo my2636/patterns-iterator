@@ -43,10 +43,12 @@ public class InputValuesTest {
 
         //given
         int rr = 0;
+        int count = 0;
 
         //when
         for (int r : new Randoms(min, max)) {
             rr = r;
+            count++;
             System.out.println("Выпало число: " + r);
             if (r == max) {
                 System.out.println("Выпало число " + max + ", давайте на этом закончим");
@@ -54,9 +56,8 @@ public class InputValuesTest {
             }
         }
 
-
         //then
         assertTrue(rr >= min || rr <= max);
+        assertTrue(min == max ? count == 1 : count >= 1);
     }
-
 }

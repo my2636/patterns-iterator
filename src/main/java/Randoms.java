@@ -17,7 +17,6 @@ import java.util.Random;
 - Протестируйте работу программы. Не забывайте про правила форматирования кода (для автоформата можете выделить код в идее и нажать Ctrl+Alt+L).
 */
 
-
 class Randoms implements Iterable<Integer> {
     protected Random random;
     int min;
